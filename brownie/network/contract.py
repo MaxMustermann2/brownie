@@ -682,8 +682,8 @@ class _DeployedContractBase(_ContractBase):
     ) -> None:
         address = _resolve_address(address)
         self.bytecode = web3.eth.get_code(address).hex()[2:]
-        if not self.bytecode:
-            raise ContractNotFound(f"No contract deployed at {address}")
+        #if not self.bytecode:
+            #raise ContractNotFound(f"No contract deployed at {address}")
         self._owner = owner
         self.tx = tx
         self.address = address
